@@ -1,137 +1,43 @@
-body{
-  margin: 0;
-  padding: 0;
-}
-.menu-container
+.align
 {
-  transform: scale(0.6);
+    display: flex;
+    justify-content: center;
+    
 }
-body{
-  background-image:url("bg-gestao.png");
-  background-repeat: no-repeat;
-  background-color: #0f1021;
-  background-position: 50% 10%;
-  margin: 50px;
-}
-#nav-mov img{ padding-top:100px;}
-#nav-data img, #nav-local img, #nav-shield img, #nav-apont img, #nav-puzzle img,
-#nav-email img, #nav-equip img, #nav-arm img, #nav-factory img, #nav-time img, 
-#nav-server img,#nav-treinamento img, #nav-checked img, #nav-col img, #nav-mov img, 
-#nav-adm img
+.main
 {
-  padding-top: 60px;
-  margin-bottom: -50px;
-}
-#nav-adm img{
-  padding-top: 80px; 
-  padding-bottom: 0px ;
-}
+    display:flex;
+    --s: 100px;  /* size  */
+    --m: 4px;    /* margin */
+    --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
 
-#nav-data, #nav-treinamento, #nav-adm, #nav-shield, #nav-local, #nav-equip,
-#nav-email, #nav-checked, #nav-puzzle, #nav-mov, #nav-apont, #nav-factory, 
-#nav-server, #nav-arm, #nav-time, #nav-col
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.textos{
-  padding-bottom: 15px;
-  text-align: center;
-  font-size: larger;
-  font-family: ;
-  letter-spacing: 0px;
-  overflow-wrap: break-word;
-  font-size: 18px;
-}
-.textos-sub
-{ 
-  margin:auto;
-  font-size: 20px;
-  text-align: center;
-}
-
-.menu-container {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.menu-container{
-  display: flex;
-  justify-content: center;
-  margin-top: 30%;
-  height: 2px;
-}
-.oculto{display: none;}
-.hex-wrapper {display: block;}
-.hex-row {clear: left;}
-.shift {margin-left: -98px;}
-.notshift{margin-right: -98px;}
-/*criação de menu hexagonal*/
-.hexagon {
-  display: flex;
-  justify-content: center;
-  float: left;
-  position: relative;
-  margin: 30px 3px;
-  width: 190px;
-  height: 110px;
-  background-color:#f0ece2;
-  background-position: center center;
-  z-index: 1;
-  /* estilização de texto */
-  line-height: 110px;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 24px !important;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #000;
-  color: rgba(0, 0, 0, .5);
-  cursor: pointer; /* mostra o cursor do mouse quando está sob o objeto */
-  transition: color 500ms ease, text-shadow 500ms ease, background-color 500ms ease, -webkit-transform 1s ease-in-out;
-}
-.hexagon:hover {
-   color: #fff;
-   text-shadow: 0 0 10px white;
-   background-color: rgba(135, 24, 62, 0.5);
- }
-.hexagon .face1,
-.hexagon .face2 {
-  position: absolute;
-  top: 0;
-
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: inherit;
-  z-index: -1;
-  /* mantém as bordas suaves in webkit */
-  backface-visibility: hidden;
- }
-.hexagon .face1:before,
-.hexagon .face2:before {
-  content: '';
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  background: inherit;
- }
-.hexagon .face1 { 
-  transform: rotate(60deg); 
-}
-.hexagon .face1:before {
-  left: 0;
-  transform-origin: left top;
-  transform: rotate(-60deg) translate(-110px, 0);
-}
-.hexagon .face2 { 
- transform: rotate(-60deg);
-}
-.hexagon .face2:before {
-  right: 0;
-  transform-origin: right top;
-  transform: rotate(60deg) translate(110px, 0);
-}
- /* fim do menu hexagonal */
+ 
+.container {
+    font-size: 0; /*disable white space between inline block element */
+   
+  }
+  
+  .container div {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s)*1.1547); 
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background:#f0ece2;
+    margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+  }
+  
+  .container div:nth-child(even) {
+    background: rgba(135, 24, 62, 0.5);
+  }
+  .container::before {
+    content: "";
+    width: calc(var(--s)/2 + var(--m));
+    float: left;
+    height: 120%;
+    shape-outside: repeating-linear-gradient(     
+                    #0000 0 calc(var(--f) - 3px),      
+                    #000  0 var(--f));
+  }
