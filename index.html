@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" style type="text/css" href="style.css">
+  <script src="submenu.js"></script>
+  <title>GestaoNaWEB</title>
+</head>
+
+<body>
+  <section class="menu-container">
+
+    <div class="hex-wrapper notshift">
+
+      <!-- Criação do submenu -->
+
+      <div class="hex-wrapper">
+        <div class="hexagon" id="a1">
+         
+          <div class="face1"></div>
+          <div class="face2"></div>
+          <p class="textos-sub">PDCA</p>
+        </div>
+
+        <div class="hexagon" id="a2">
+         
+          <div class="face1"></div>
+          <div class="face2"></div>
+          <p class="textos-sub">PDLA</p>
+        </div>
+        <div class="hexagon" id="a3">
+          
+          <div class="face1"></div>
+          <div class="face2"></div>
+          <p class="textos-sub">ROMANEIO</p>
+        </div>
+        <div class="hexagon" id="a4">
+          <div class="face1"></div>
+          <div class="face2"></div>
+          <p class="textos-sub">MOTORISTAS</p>
+        </div>
+      </div>
+
+
+      <div class="hex-row shift">
+        <span onclick="muda()">
+          <!--Fim do Submenu -->
+
+          <div class="hexagon" id="nav-box">
+
+            <img src="box.png" width="100px" height="100px">
+            <div class="face1"></div>
+            <div class="face2"></div>
+        </span>
+      </div>
+    </div>
+
+    <a href="login.html">
+      <div class="hexagon" id="nav-data">
+
+        <img src="data analytics.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Linhas Comerciais</p>
+        </div>
+    </a>
+    
+    <div class="hexagon" id="nav-email">
+
+      <img src="email.png" width="100px" height="100px">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <p class="textos">Email</p>
+
+    </div>
+    
+    <div class="hexagon" id="nav-equip">
+      <img src="equipamento.png" width="100px" height="100px">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <p class="textos">Equipamento</p>
+    </div>
+    <div class="hexagon" id="nav-mov">
+      <img src="movimento.png" width="100px" height="100px">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <p class="textos">Movimentação</p>
+    </div>
+    <div class="hexagon" id="nav-puzzle">
+      <img src="puzzle.png" width="100px" height="100px">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <p class="textos">Prototipos</p>
+    </div>
+    
+      
+    <div class="hex-row">
+      <div class="hexagon" id="nav-checked">
+        <img src="checked.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Em Produção</p>
+      </div>
+      
+
+      <div class="hexagon" id="nav-local">
+        <img src="localizacao.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Localização</p>
+      </div>
+      
+
+      <div class="hexagon" id="nav-shield">
+        <img src="shield.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Não Conformidades</p>
+      </div>
+      
+
+      <div class="hexagon" id="nav-server">
+        <img src="server.png" width="90px" height="90px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Apontamentos</p>
+      </div>
+    </div>
+    <div class="hexagon" id="nav-time">
+      <img src="time.png" width="100px" height="100px">
+      <div class="face1"></div>
+      <div class="face2"></div>
+     <p class="textos">Clientes</p>
+        </div>
+    
+  <div class="hex-row shift">
+      <div class="hexagon" id="nav-factory">
+        <img src="factory.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Todas Produções</p>
+      </div>
+      
+      <div class="hexagon" id="nav-arm">
+        <img src="armazem.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Armazem</p>
+      </div>
+      
+      <div class="hexagon" id="nav-apont">
+        <img src="apontamento.png" width="90px" height="90px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Apontamentos</p>
+      </div>
+      <div class="hexagon" id="nav-treinamento">
+        <img src="treinamentos.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Treinamentos</p>
+      </div>
+      
+      <div class="hexagon" id="nav-col">
+        <img src="colaboradores.png" width="100px" height="100px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Colaboradores</p>
+      </div>
+      <div class="hexagon" id="nav-adm">
+        <img src="admin.png" width="140px" height="140px">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <p class="textos">Administração</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer>
+
+  </footer>
+
+</body>
+
+</html>
